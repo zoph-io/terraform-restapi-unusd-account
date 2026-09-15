@@ -1,8 +1,11 @@
 # Many accounts
 
 Register a whole AWS Organization (100+ accounts) with `for_each` over
-`accounts.yaml`. This folder uses `source = "../.."` so you can
-`terraform init` from a clone. Callers should pin:
+`accounts.yaml`. Full onboarding (IAM role + these rows):
+[Many AWS accounts](https://docs.unusd.cloud/how-to/multiple-accounts/).
+
+This folder uses `source = "../.."` so you can `terraform init` from a clone.
+Callers should pin:
 
 ```hcl
 source = "github.com/zoph-io/terraform-restapi-unusd-account?ref=v1.0.1"

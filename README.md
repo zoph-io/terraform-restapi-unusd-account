@@ -125,6 +125,7 @@ Until then, pin the GitHub source as shown above. Use `Mastercard/restapi` 1.20.
 ## Related
 
 - Product: [unusd.cloud](https://unusd.cloud)
+- Many AWS accounts (IAM role + register): [docs.unusd.cloud/how-to/multiple-accounts](https://docs.unusd.cloud/how-to/multiple-accounts/)
 - Customer API: [docs.unusd.cloud/how-to/customer-api](https://docs.unusd.cloud/how-to/customer-api/)
 - IAM role (Terraform): [docs.unusd.cloud/how-to/use-terraform](https://docs.unusd.cloud/how-to/use-terraform/)
 - Security / DPA: [unusd.cloud/security](https://unusd.cloud/security)
