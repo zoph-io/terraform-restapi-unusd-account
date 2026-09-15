@@ -1,0 +1,8 @@
+# Quoted 12-digit AWS account IDs. Generate from:
+# aws organizations list-accounts --query 'Accounts[?Status==`ACTIVE`].[Id,Name]' --output text
+- account_id: "111111111111"
+  alias: prod
+- account_id: "222222222222"
+  alias: staging
+- account_id: "333333333333"
+  alias: sandbox

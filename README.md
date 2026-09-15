@@ -113,6 +113,7 @@ Plan gates match the product: Slack Startup+, Teams Business+, SNS Enterprise. A
 
 - [`examples/minimal`](examples/minimal): account ID only, org defaults for the rest
 - [`examples/complete`](examples/complete): schedule, email, Slack, tags
+- [`examples/many`](examples/many): `for_each` over a YAML list (100+ accounts)
 
 ## Registry
 

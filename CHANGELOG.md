@@ -5,6 +5,12 @@ All notable changes to this module are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- `examples/many`: `for_each` over a YAML list for org-scale registration.
+
 ## [1.0.1] - 2026-09-15
 
 ### Fixed
