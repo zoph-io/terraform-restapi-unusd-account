@@ -5,7 +5,7 @@ org Team settings defaults.
 
 ```hcl
 module "account" {
-  source = "github.com/zoph-io/terraform-restapi-unusd-account?ref=v1.0.0"
+  source = "github.com/zoph-io/terraform-restapi-unusd-account?ref=v1.0.1"
 
   account_id = var.account_id
 }

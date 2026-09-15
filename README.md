@@ -17,7 +17,7 @@ terraform {
   required_providers {
     restapi = {
       source  = "Mastercard/restapi"
-      version = ">= 1.20.0"
+      version = "~> 1.20"
     }
   }
 }
@@ -37,7 +37,7 @@ provider "restapi" {
 }
 
 module "prod" {
-  source = "github.com/zoph-io/terraform-restapi-unusd-account?ref=v1.0.0"
+  source = "github.com/zoph-io/terraform-restapi-unusd-account?ref=v1.0.1"
 
   account_id = "123456789012"
   alias      = "prod"
@@ -80,7 +80,7 @@ The restapi provider stores the PUT body in state, including Slack and Teams web
 | Name | Version |
 | --- | --- |
 | terraform | >= 1.3.0 |
-| restapi | >= 1.20.0 |
+| restapi | ~> 1.20 |
 
 ## Inputs
 
@@ -118,7 +118,8 @@ Plan gates match the product: Slack Startup+, Teams Business+, SNS Enterprise. A
 
 Repository layout follows HashiCorp's [standard module structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure) (`terraform-<PROVIDER>-<NAME>`). After the first `vX.Y.Z` tag, the module can be published on the Terraform Registry as `zoph-io/unusd-account/restapi`.
 
-Until then, pin the GitHub source as shown above.
+Until then, pin the GitHub source as shown above. Use `Mastercard/restapi` 1.20.x
+(`~> 1.20`). Version 3.x currently breaks `terraform plan` after a successful apply.
 
 ## Related
 

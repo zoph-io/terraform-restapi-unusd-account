@@ -32,3 +32,7 @@ jobs:
         run: |
           terraform init -backend=false
           terraform validate
+      - name: Terraform test
+        run: |
+          terraform init -backend=false
+          terraform test

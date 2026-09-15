@@ -7,5 +7,5 @@ This folder uses `source = "../.."` so you can `terraform init` from a clone.
 Callers should pin:
 
 ```hcl
-source = "github.com/zoph-io/terraform-restapi-unusd-account?ref=v1.0.0"
+source = "github.com/zoph-io/terraform-restapi-unusd-account?ref=v1.0.1"
 ```

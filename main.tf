@@ -18,6 +18,10 @@ locals {
 
 resource "restapi_object" "account" {
   path           = "/accounts/${var.account_id}"
+  create_path    = "/accounts/${var.account_id}"
+  read_path      = "/accounts/${var.account_id}"
+  update_path    = "/accounts/${var.account_id}"
+  destroy_path   = "/accounts/${var.account_id}"
   create_method  = "PUT"
   update_method  = "PUT"
   destroy_method = "DELETE"
