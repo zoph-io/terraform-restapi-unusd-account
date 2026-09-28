@@ -89,7 +89,7 @@ The restapi provider stores the PUT body in state, including Slack and Teams web
 | account_id | 12-digit AWS account ID to register on unusd.cloud. | `string` | n/a | yes |
 | alias | Dashboard friendly name. Not the IAM account alias. | `string` | `""` | no |
 | enabled | Whether unusd.cloud should scan this account. Omit to keep org default / current value. | `bool` | `null` | no |
-| schedule | EventBridge cron (six fields) or `disabled`. Omit for org defaults. | `string` | `null` | no |
+| schedule | EventBridge cron (six fields, at most once a day: one minute and one hour) or `disabled`. Omit for org defaults. | `string` | `null` | no |
 | timezone | IANA timezone such as `Europe/Paris`. | `string` | `null` | no |
 | email | Email report settings. Omit for org defaults. | `object` | `null` | no |
 | slack | Slack incoming webhook. Startup+. | `object` | `null` | no |

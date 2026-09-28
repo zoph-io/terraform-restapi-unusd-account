@@ -28,11 +28,16 @@ variable "enabled" {
 variable "schedule" {
   type        = string
   default     = null
-  description = "EventBridge cron (six fields) or disabled. Omit to keep org Team settings defaults."
+  description = "EventBridge cron (six fields, at most once a day) or disabled. Omit to keep org Team settings defaults."
 
   validation {
     condition     = var.schedule == null ? true : (lower(var.schedule) == "disabled" || length([for part in split(" ", var.schedule) : part if part != ""]) == 6)
     error_message = "schedule must be an EventBridge cron with 6 fields, or disabled."
+  }
+
+  validation {
+    condition     = var.schedule == null ? true : (lower(var.schedule) == "disabled" || can(regex("^[0-5]?[0-9] ([01]?[0-9]|2[0-3]) ", var.schedule)))
+    error_message = "schedule may run at most once a day: use one minute and one hour, for example 0 7 * * ? *."
   }
 }
 
